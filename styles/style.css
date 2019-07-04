@@ -110,8 +110,8 @@
 	width: 15px;
 }
 .project-thumbnail{
-	height: 25%;
-	width: auto;
+	width: 80%;
+	height: auto;
 	margin: 15px 0;
 }
 .project-name{
