@@ -122,5 +122,46 @@
 
 footer{
 	height: 100px;
+	padding: 25px;
 	background: rgb(34, 33, 33);
+}
+
+.phone{
+	height: 30px;
+	width: 100%;
+	display: inline-flex;
+	float: left;
+	margin-bottom: 10px;
+}
+.phone-logo{
+	height: 30px;
+	width: 30px;
+}
+.phone-number{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 15px;
+	color: #FFFFFF;
+	text-decoration: none;
+	margin-left: 10px;
+	padding-top: 7px;
+}
+
+.mail{
+	height:30px;
+	width: 100%;
+	display: inline-flex;
+	float: left;
+	margin-bottom: 10px;
+}
+.mail-logo{
+	height: 30px;
+	width: 35px;
+}
+.email{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 15px;
+	color: #FFFFFF;
+	text-decoration: none;
+	margin-left: 10px;
+	padding-top: 7px;
 }
