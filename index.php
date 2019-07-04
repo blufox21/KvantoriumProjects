@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="styles/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Ubuntu:700&display=swap&subset=cyrillic" rel="stylesheet">  
 	<meta charset="utf-8">
+	<meta name="format-detection" content="telephone=no"/>
 </head>
 
 <body>
@@ -25,7 +26,7 @@
 			<a href="#">РОБО</a>
 			<a href="#">ЭНЕРДЖИ</a>
 			<a href="#">ПРОМДИЗАЙН</a>
-			<a href="#">ХАЙКТЕК</a>
+			<a href="#">ХАЙ-ТЕК</a>
 		</div>
 	</header>
 	<div class="main">
@@ -67,7 +68,14 @@
 		</div>
 	</div>
 	<footer>
-
+		<div class="phone">
+			<img src="res/images/phone.png" alt="" class="phone-logo">
+			<span class="phone-number">+7 (863) 238-15-68,  +7 (863) 251-22-81</span>
+		</div>
+		<div class="mail">
+			<img src="res/images/mail.png" alt="" class="mail-logo">
+			<span class="email">info@kvantorium-don.ru</span>
+		</div>
 	</footer>
 </body>
 </html>
