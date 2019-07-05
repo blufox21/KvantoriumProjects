@@ -8,6 +8,9 @@
 </head>
 
 <body>
+	<div id="overlay">
+		<?php include("registration-block.php"); ?>
+	</div>
 	<header>
 		<div class="header">
 			<div class="logo">
@@ -16,7 +19,7 @@
 
 			<div class="search">
 					<img src="res/images/magnif.png" href=#>
-					<img src="res/images/sign.png" href=#>
+					<img src="res/images/sign.png" onclick="alert(document.getElementById('overlay').style.display = 'block');">
 			</div>
 		</div>
 
@@ -29,6 +32,9 @@
 			<a href="#">ХАЙ-ТЕК</a>
 		</div>
 	</header>
+
+	
+
 	<div class="main">
 		<div class="kvantum" id="Bio">
 			<h1 class="kvantum-name">Самые популярные Био</h1>
