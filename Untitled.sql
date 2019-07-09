@@ -15,8 +15,6 @@ CREATE TABLE projects (
     PRIMARY KEY (projID)  
 ) ENGINE = InnoDB;
 
-INSERT INTO projects VALUES ("mister", "летающая машина", "А", 0, 0);
-
 CREATE TABLE ratings(
 	username VARCHAR(20) NOT NULL,
     projID INT NOT NULL,
@@ -33,8 +31,6 @@ CREATE TABLE kvantum_proj(
     FOREIGN KEY (projID) REFERENCES projects (projID) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-INSERT INTO users VALUES ("mister", "123321", "лунев максим александрович", "exmp@mail.ru");
-
 CREATE TABLE user_proj (
     username VARCHAR(20) NOT NULL,
     projID INT NOT NULL,
@@ -42,8 +38,6 @@ CREATE TABLE user_proj (
     FOREIGN KEY (username) REFERENCES users (username) ON DELETE CASCADE ON UPDATE CASCADE,
     FOREIGN KEY (projID) REFERENCES projects (projID) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE = InnoDB;
-
-INSERT INTO user_proj VALUES ("mister",1 );
 
 
 CREATE TABLE proj_media (
