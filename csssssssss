@@ -1,0 +1,110 @@
+*{
+	margin:0;
+	padding:0;
+}
+.header{
+	position: relative;
+	background: #FFFFFF;
+	height: 30px;
+}
+.logo{
+	float: left;
+	margin: 30px;
+	margin-bottom: 10px;
+}
+.logo img{
+	width: 40px;
+	height: 40px;
+}
+
+.search{
+	float: right;
+	margin: 40px;
+	margin-bottom: 10px;
+}
+.search img{
+	width: 30px;
+	height: 30px;
+	margin-left: 20px;
+	border-radius: 10px;
+	padding: 5px;
+	
+}
+.search img:hover{
+	cursor: pointer;
+	background: rgb(211, 211, 211);
+}
+.name{
+    width: 50%;
+	height: 30px;
+
+}
+.avtor{
+    width: 30%;
+	height: 30px;
+}
+.opis{
+    width: 50%;
+	height: 50%;
+}
+.plus{
+	float: left;
+
+}
+.plus img{
+	width: 30px;
+	height: 30px;
+   
+}
+.plus img:hover{
+	cursor: pointer;
+	background: rgb(227, 252, 233);
+}
+#overlay{
+	position: fixed;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	display: none;
+	background-color:rgba(39, 39, 39, 0.5);
+	z-index: 10;
+  	align-items: center;
+  	justify-content: center;
+}
+.popup{
+	position: absolute;
+	background: #FFFFFF;
+	width: 600px;
+	height: 750px;
+	border-radius: 30px;
+	padding: 30px 15px;
+	text-align: center;
+}
+.signinup{
+	font-size: 30px;
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(39,39,39);
+}
+.signinup a:hover{
+	cursor: pointer;
+}
+.field{
+	margin: 40px auto;
+	font-family: 'Ubuntu', sans-serif;
+}
+.login{
+	display:none;
+}
+#okno{
+	position: fixed;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	display: none;
+	background-color:rgba(39, 39, 39, 0.5);
+	z-index: 10;
+  	align-items: center;
+  	justify-content: center;
+}
