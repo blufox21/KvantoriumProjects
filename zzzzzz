@@ -1,0 +1,105 @@
+<?php
+
+if (!isset($_POST["file"]))
+{
+
+	foreach($_FILES['upload'] as $key => $value) {
+		foreach($value as $k => $v) {
+			$_FILES['upload'][$k][$key] = $v;
+		}
+	}
+		unset($_FILES['upload'][$key]);
+		foreach ($_FILES['upload'] as $k => $v) {
+			echo ($k." ");
+		}
+	
+}
+?>
+<html>
+<title>Добавление проекта</title>
+	
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Ubuntu:700&display=swap&subset=cyrillic" rel="stylesheet">  
+    <link rel="stylesheet" href="new media.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Untitled-1.css">
+
+	<meta charset="utf-8">
+</head>
+<body>
+	<header>
+		<div class="header">
+	
+			<div class="logo">
+				<img src="images/Logo.png">
+			</div>
+
+			<div class="search">
+					<img src="images/magnif.png" href=#>
+					<img src="images/sign.png" href=#>
+			</div>
+		</div>
+
+		<div class="nav">
+			<a href="#">БИО</a>
+			<a href="#">IT</a>
+			<a href="#">РОБО</a>
+			<a href="#">ЭНЕРДЖИ</a>
+			<a href="#">ПРОМДИЗАЙН</a>
+			<a href="#">ХАЙКТЕК</a>
+		</div>
+		
+	</header>
+	<div class="main">
+		 <div class="kvantum" id="Bio">
+            <h1>Название твоего проекта</h1>
+                <input type=text class ="name"> 
+            <h1>Создатели </h1>    
+                <input type=text class ="avtor"> 
+            <h1> Описание</h1>
+                <input type=text class ="opis">       
+            <div class="plus">
+					<img src="plus.png" onclick="document.getElementById('okno').style.display = 'flex'; "href=#>
+					    <div id= "okno" style="display: none;">
+				<div class="popup">
+    				<div class="signinup">
+        				<a onclick="document.getElementById('reg').style.display = 'block';
+                    document.getElementById('login').style.display = 'none';"> Сылки видео или картинки</a>
+    				</div>
+    	<div id="reg">
+        <div >
+            <span>Видео</span>
+            <input type="text"class="field">
+        </div>
+        	<div >
+						<span>картинки</span>
+						
+						<form action="new.php" method="post" enctype="multipart/form-data">
+  <textarea name="upload"></textarea>
+  <input type="file" name="upload[]" multiple>
+  <input type="submit" name="file">
+</form>
+
+
+       		</div>
+   						 </div>
+    		<div id="login">
+			</div>
+</div>
+				</div>
+           	</div>
+        </div>	
+    </div>
+	
+		
+    <footer>
+		<div class="phone">
+			<img src="images/phone.png" alt="" class="phone-logo">
+			<span class="phone-number">+7 (863) 238-15-68,  +7 (863) 251-22-81</span>
+		</div>
+		<div class="mail">
+			<img src="images/mail.png" alt="" class="mail-logo">
+			<span class="email">info@kvantorium-don.ru</span>
+		</div>
+	</footer>
+</body>
+</html>
