@@ -19,7 +19,7 @@
 
 			<div class="search">
 					<img src="res/images/magnif.png" href=#>
-					<img src="res/images/sign.png" onclick="alert(document.getElementById('overlay').style.display = 'block');">
+					<img src="res/images/sign.png" onclick="document.getElementById('overlay').style.display = 'flex';">
 			</div>
 		</div>
 
