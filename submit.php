@@ -9,7 +9,7 @@ header('Content-Type: text/html; charset=utf-8');
     $dbUser = "root";
     $dbPass = "";
     $dbName = "Main";
-    if(!empty($username) || !empty($pass) || !empty($name) || !empty($mail)){
+    if(!empty($username) && !empty($pass) && !empty($name) && !empty($mail)){
         $conn = new mysqli($host, $dbUser, $dbPass, $dbName);
         $conn->set_charset('utf8');
         if (mysqli_connect_error()) {
