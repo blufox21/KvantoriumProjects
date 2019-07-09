@@ -8,7 +8,7 @@ header('Content-Type: text/html; charset=utf-8');
     $host = "localhost";
     $dbUser = "root";
     $dbPass = "";
-    $dbName = "n";
+    $dbName = "Main";
     if(!empty($username) || !empty($pass) || !empty($name) || !empty($mail)){
         $conn = new mysqli($host, $dbUser, $dbPass, $dbName);
         $conn->set_charset('utf8');
@@ -16,7 +16,7 @@ header('Content-Type: text/html; charset=utf-8');
             printf('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
         } 
         else {
-            $query = "INSERT INTO users (username, pass, fio, email) VALUES (" . $username . "," . $pass . "," . $name . "," . $mail . ")";
+            $query = "INSERT INTO users VALUES ('" . $username . "','" . $pass . "','" . $name . "','" . $mail . "')";
             printf($query);
             printf($conn->query($query));
         }
