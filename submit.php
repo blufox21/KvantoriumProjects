@@ -1,10 +1,9 @@
 <html>
-    <head></head>
+    <head><meta charset="utf-8"></head>
     <body>
         <div>
             <?php 
                 ob_start();
-                header('Content-Type: text/html; charset=utf-8');
                 $username = $_POST['username'];
                 $pass = md5($_POST['password']);
                 $name = $_POST['fio'];
@@ -27,11 +26,17 @@
                         $query = "INSERT INTO users VALUES ('" . $username . "','" . $pass . "','" . $name . "','" . $mail . "')";
                         if($result->num_rows  > 0){
                             echo('<div> </div>');
-                            header('refresh: 10; url=index.php');
+                            echo '<script>setTimeout(function () {
+                                //Redirect with JavaScript
+                                window.location.href= "index.php";
+                             }, 10000);</script>';
                         }
                         else{
                             $conn->query($query);
-                            header('refresh: 10; url=index.php');
+                            echo '<script>setTimeout(function () {
+                                //Redirect with JavaScript
+                                window.location.href= "index.php";
+                             }, 10000);</script>';
                         }
                     }
                 }
@@ -43,7 +48,7 @@
                 mysqli_close($conn);
             ?>
 
-            <p>вы вернётесь на начальную через 10сек</p>
+            <p>вы вернётесь на начальную через 10 сек</p>
         </div>
     </body>
 </html>
