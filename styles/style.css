@@ -82,40 +82,57 @@
 #Design{background: rgb(255, 229, 237);}
 #Hitech{background: rgb(253, 225, 225);}
 
-.proj{
+.proj-card{
+	font-family: 'Roboto Slab', serif;
+	margin: 17px 40px;
 	text-align: center;
 	background: white;
-	width: 18%;
-	border-radius: 10px;
-	margin: 40px 50px;
-	border: 1px solid grey;
+	width: 17%;
+	min-width: 150px;
+	height: 400px;
+	position: relative;
+	transition-duration: 100ms;
 }
-.proj:hover{
+.proj-card:hover{
 	transform: scale(1.1, 1.1);
 	cursor: pointer;
+	transition-duration: 100ms;
 }
+
+.project-descriptor{
+	color: grey;
+}
+
 .rating{
-	margin-top: 10px;
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 15px;
-	color: rgb(20, 20, 20);
-	display: inline-flex;
+	color: rgb(231, 231, 231);
+	display: inline-flex; 
+	position: absolute;
+	bottom: 0;
+	background-color: rgb(37, 37, 37);
+	width: 100%;
+	right: 0;
+	padding: 8px 0px;
 }
 
 .likes{
 	margin-right: 5px;
+	width: 50%;
+	text-align: center;
 }
 .dislikes{
 	margin-left: 5px;
+	width:50%;
+	text-align: center;
 }
 .rating div img{
 	height: 15px;
 	width: 15px;
 }
-.project-thumbnail{
-	width: 80%;
+.proj-image{
+	width: 100%;
 	height: auto;
-	margin: 15px 0;
 }
 .project-name{
 	font-size: 30px;
@@ -197,9 +214,6 @@ footer{
 }
 .signinup a:hover{
 	cursor: pointer;
-}
-.reg{
-
 }
 .field{
 	width: 50%;
