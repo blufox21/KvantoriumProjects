@@ -28,13 +28,13 @@
 	</div>
 	<div class="rating">
 		<div class="likes">
-			<span>20 L</span>
-			<img src="res/images/arrow.png">
+			<span>20</span>
+			<img src="res/images/arrowwht.png">
 		</div>
 
-		<div class="dislikes">
-			<span>10 DL</span>
-			<img src="res/images/arrowD.png">
+		<div class="likes">
+			<span>10</span>
+			<img src="res/images/arrowDwht.png">
 		</div>
 	</div>
 </div>
