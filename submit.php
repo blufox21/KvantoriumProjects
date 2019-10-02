@@ -29,14 +29,14 @@
                             echo '<script>setTimeout(function () {
                                 //Redirect with JavaScript
                                 window.location.href= "index.php";
-                             }, 10000);</script>';
+                             }, 5000);</script>';
                         }
                         else{
                             $conn->query($query);
                             echo '<script>setTimeout(function () {
                                 //Redirect with JavaScript
                                 window.location.href= "index.php";
-                             }, 10000);</script>';
+                             }, 5000);</script>';
                         }
                     }
                 }
@@ -48,7 +48,7 @@
                 mysqli_close($conn);
             ?>
 
-            <p>вы вернётесь на начальную через 10 сек</p>
+            <p style="width: 100%; height: 100%; text-align: center; margin-top: 260px; font-size: 40px; font-family: 'Ubuntu', sans-serif;">вы вернётесь на начальную через 10 секунд</p>
         </div>
     </body>
 </html>
