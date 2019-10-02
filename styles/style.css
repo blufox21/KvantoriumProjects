@@ -60,7 +60,7 @@
 }
 
 .kvantum{
-	height: 700px;
+	min-height: 700px;
 	padding: 30px;
 }
 .kvantum-name{
@@ -71,8 +71,11 @@
 
 .featured{
 	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
 	margin-top: 5%;
 	margin-left: 2%;
+	
 }
 
 #Bio{background: rgb(227, 252, 233);}
@@ -86,9 +89,9 @@
 	font-family: 'Roboto Slab', serif;
 	margin: 17px 40px;
 	text-align: center;
-	background: white;
+	background: rgb(255, 255, 255);
 	width: 17%;
-	min-width: 150px;
+	min-width: 250px;
 	height: 400px;
 	position: relative;
 	transition-duration: 100ms;
@@ -121,11 +124,6 @@
 	width: 50%;
 	text-align: center;
 }
-.dislikes{
-	margin-left: 5px;
-	width:50%;
-	text-align: center;
-}
 .rating div img{
 	height: 15px;
 	width: 15px;
@@ -135,7 +133,7 @@
 	height: auto;
 }
 .project-name{
-	font-size: 30px;
+	font-size: 25px;
 	padding: 10px 0;
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -207,6 +205,14 @@ footer{
 	padding: 30px 15px;
 	text-align: center;
 }
+
+.login-reg:hover{
+	color: rgb(0, 120, 156);
+	transition-duration: 0.7s;
+}
+
+.login-reg{transition-duration: 0.7s;}
+
 .signinup{
 	font-size: 30px;
 	font-family: 'Ubuntu', sans-serif;
