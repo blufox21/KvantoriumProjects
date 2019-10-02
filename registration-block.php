@@ -40,7 +40,6 @@
                 <span>Введите пароль :</span>
                 <input type="password" name="password" placeholder="Password" required>
             </div>
-            <div class="field">
         </form>
     </div>
 </div>
