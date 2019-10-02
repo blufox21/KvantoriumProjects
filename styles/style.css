@@ -260,6 +260,6 @@ footer{
 	cursor: pointer;
 }
 
-.login{
+#login{
 	display:none;
 }
