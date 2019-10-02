@@ -1,10 +1,10 @@
 <div class="popup">
     <img src="res/images/x.png" class="close" onclick="document.getElementById('overlay').style.display = 'none';">
     <div class="signinup">
-        <a onclick="document.getElementById('reg').style.display = 'block';
+        <a class="login-reg" onclick="document.getElementById('reg').style.display = 'block';
                     document.getElementById('login').style.display = 'none';">Регистрация</a>
         /
-        <a onclick="document.getElementById('reg').style.display = 'none';
+        <a class="login-reg" onclick="document.getElementById('reg').style.display = 'none';
                     document.getElementById('login').style.display = 'block';">войти</a>
     </div>
 
@@ -31,6 +31,16 @@
     </div>
 
     <div id="login">
-        
+        <form action="index.php" method="post">
+            <div class="field">
+                <span>Введите никнейм :</span>
+                <input type="username" name="username" placeholder="Username" required>
+            </div>
+            <div class="field">
+                <span>Введите пароль :</span>
+                <input type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="field">
+        </form>
     </div>
 </div>
