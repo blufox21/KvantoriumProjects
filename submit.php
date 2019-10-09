@@ -4,40 +4,30 @@
         <div>
             <?php 
                 ob_start();
-                $username = $_POST['username'];
-                $pass = md5($_POST['password']);
+                $username = trim($_POST['username']);
+                $pass = md5(trim($_POST['password']));
                 $name = $_POST['fio'];
                 $mail = $_POST['email'];
 
-                $host = "localhost";
-                $dbUser = "root";
-                $dbPass = "";
-                $dbName = "Main";
-                $conn = new mysqli($host, $dbUser, $dbPass, $dbName);
-                $conn->set_charset('utf8');
+                require_once "config.php";
                 
                 if(!empty($username) && !empty($pass) && !empty($name) && !empty($mail)){
-                    if (mysqli_connect_error()) {
-                        printf('Connect Error('. mysqli_connect_errno().')'. mysqli_connect_error());
-                    } 
-                    else {
-                        $checkQuery = "SELECT * FROM users WHERE username='" . $username . "' OR email='" . $mail . "'";
-                        $result = $conn->query($checkQuery);
-                        $query = "INSERT INTO users VALUES ('" . $username . "','" . $pass . "','" . $name . "','" . $mail . "')";
-                        if($result->num_rows  > 0){
-                            echo('<div> </div>');
-                            echo '<script>setTimeout(function () {
-                                //Redirect with JavaScript
-                                window.location.href= "index.php";
-                             }, 5000);</script>';
-                        }
-                        else{
-                            $conn->query($query);
-                            echo '<script>setTimeout(function () {
-                                //Redirect with JavaScript
-                                window.location.href= "index.php";
-                             }, 5000);</script>';
-                        }
+                    $checkQuery = "SELECT * FROM users WHERE username='" . $username . "' OR email='" . $mail . "'";
+                    $result = $conn->query($checkQuery);
+                    $query = "INSERT INTO users VALUES ('" . $username . "','" . $pass . "','" . $name . "','" . $mail . "')";
+                    if($result->num_rows  > 0){
+                        echo('<div> </div>');
+                        echo '<script>setTimeout(function () {
+                            //Redirect with JavaScript
+                            window.location.href= "index.php";
+                            }, 5000);</script>';
+                    }
+                    else{
+                        $conn->query($query);
+                        echo '<script>setTimeout(function () {
+                            //Redirect with JavaScript
+                            window.location.href= "index.php";
+                            }, 5000);</script>';
                     }
                 }
                 else{
