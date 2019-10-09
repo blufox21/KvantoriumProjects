@@ -31,7 +31,7 @@
     </div>
 
     <div id="login">
-        <form action="index.php" method="post">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="field">
                 <span>Введите никнейм :</span>
                 <input type="username" name="username" placeholder="Username" required>
@@ -40,6 +40,7 @@
                 <span>Введите пароль :</span>
                 <input type="password" name="password" placeholder="Password" required>
             </div>
+            <input type="submit" name="submit" class="submit" value="войти">
         </form>
     </div>
 </div>
