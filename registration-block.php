@@ -31,6 +31,7 @@
     </div>
 
     <div id="login">
+    <?php include("login.php"); ?>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <div class="field">
                 <span>Введите никнейм :</span>
