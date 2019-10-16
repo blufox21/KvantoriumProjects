@@ -1,6 +1,5 @@
 <?php
-//start session
-session_start();
+//require_once "config.php";
 
 // Check if the user is already logged in, if yes then redirect him to the main page
 if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
@@ -8,7 +7,6 @@ if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
     exit;
 }
 
-require_once "config.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     //check field emptiness
@@ -21,12 +19,27 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     }
 
     if(!empty($_POST["password"])){
-        $password = trim($_POST["password"]);
+        $password = md5(trim($_POST["password"]));
     }
     else{
         echo("Заполните все поля");
         die();
     }
 
+    //sql query
+    $sql = "SELECT * FROM users WHERE username='".$username."' AND pass='".$password."'";
+    //execute query
+    $res = $conn->query($sql);
+
+    if($res->num_rows > 0){
+
+        $_SESSION["loggedin"] = true;
+        $_SESSION["user"] = $username;
+
+        //redirect back to main page
+        header("location: index.php");
+    }else{
+        echo("неверный пароль или ник");
+    }
 }
 ?>
