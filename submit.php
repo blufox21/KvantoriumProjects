@@ -4,12 +4,11 @@
         <div>
             <?php 
                 ob_start();
+                //require_once "config.php";
                 $username = trim($_POST['username']);
                 $pass = md5(trim($_POST['password']));
                 $name = $_POST['fio'];
                 $mail = $_POST['email'];
-
-                require_once "config.php";
                 
                 if(!empty($username) && !empty($pass) && !empty($name) && !empty($mail)){
                     $checkQuery = "SELECT * FROM users WHERE username='" . $username . "' OR email='" . $mail . "'";
