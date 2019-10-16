@@ -1,3 +1,4 @@
+<?php require_once "config.php";?>
 <html>
 <head>
 	<title>Главная</title>
@@ -8,6 +9,11 @@
 </head>
 
 <body>
+<?php
+if($_SESSION["loggedin"] === true){
+	include('<div style="text-align: center; background-color: rgb(193, 248, 214); color: black;">Выполнен Вход</div>');
+}
+?>
 	<div id="overlay">
 		<?php include("registration-block.php"); ?>
 	</div>
