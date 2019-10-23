@@ -37,7 +37,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $_SESSION["user"] = $username;
 
         //redirect back to main page
-        header("location: index.php");
+        <script>window.location.href= "index.php";</script>
+        //header("location: index.php");
     }else{
         echo("неверный пароль или ник");
     }
