@@ -1,10 +1,10 @@
+<?php require_once "config.php";?>
 <html>
     <head><meta charset="utf-8"></head>
     <body>
         <div>
             <?php 
                 ob_start();
-                //require_once "config.php";
                 $username = trim($_POST['username']);
                 $pass = md5(trim($_POST['password']));
                 $name = $_POST['fio'];
@@ -14,6 +14,7 @@
                     $checkQuery = "SELECT * FROM users WHERE username='" . $username . "' OR email='" . $mail . "'";
                     $result = $conn->query($checkQuery);
                     $query = "INSERT INTO users VALUES ('" . $username . "','" . $pass . "','" . $name . "','" . $mail . "')";
+                    echo("INSERT INTO users VALUES ('" . $username . "','" . $pass . "','" . $name . "','" . $mail . "')");
                     if($result->num_rows  > 0){
                         echo('<div> </div>');
                         echo '<script>setTimeout(function () {
