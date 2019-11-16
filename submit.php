@@ -14,7 +14,6 @@
                     $checkQuery = "SELECT * FROM users WHERE username='" . $username . "' OR email='" . $mail . "'";
                     $result = $conn->query($checkQuery);
                     $query = "INSERT INTO users VALUES ('" . $username . "','" . $pass . "','" . $name . "','" . $mail . "')";
-                    echo("INSERT INTO users VALUES ('" . $username . "','" . $pass . "','" . $name . "','" . $mail . "')");
                     if($result->num_rows  > 0){
                         echo('<div> </div>');
                         echo '<script>setTimeout(function () {
