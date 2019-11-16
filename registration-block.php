@@ -31,8 +31,13 @@
     </div>
 
     <div id="login">
-    <?php include("login.php"); ?>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+    <?php include("login.php"); 
+    if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true){
+        echo('<p style="margin-top: 70px; font-size:24px; font-family: \'Roboto Slab\', serif;">Вы уже вошли</p>
+              <form method="post"><input type="submit" class="submit" value="Выйти" style="margin:20px;"></form>');
+    }else{
+        echo('
+        <form  method="post">
             <div class="field">
                 <span>Введите никнейм :</span>
                 <input type="username" name="username" placeholder="Username" required>
@@ -42,6 +47,8 @@
                 <input type="password" name="password" placeholder="Password" required>
             </div>
             <input type="submit" name="submit" class="submit" value="войти">
-        </form>
+        </form>');
+    }
+    ?>
     </div>
 </div>
