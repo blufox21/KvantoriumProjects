@@ -8,7 +8,7 @@
 .header{
 	position: relative;
 	background: #FFFFFF;
-	height: 30px;
+	height: 100px;
 }
 .logo{
 	float: left;
@@ -69,6 +69,49 @@
 	color: rgb(37, 37, 37);
 	font-size: 30px;
 }
+
+.background-pic{
+	position:fixed;
+	height: 4000px;
+	display: block;
+	width: 4000px;
+	z-index: -20;
+	left: 0;
+	top:0;
+	background-image: url("../res/images/bg.jpg");
+	-webkit-filter: blur(10px);
+  	-moz-filter: blur(10px);
+  	-o-filter: blur(10px);
+  	-ms-filter: blur(10px);
+	filter: blur(10px) brightness(50%);
+}
+.kvantorium-desc{
+	width:100%;
+	color: white;
+	text-align: center;
+	font-size: 24px;
+}
+.kvantorium-desc-img{
+	transition-duration: 0.5s;
+	display: inline-block;
+	height:300px;
+	width:300px;
+	margin: 40px;
+	background: rgba(255, 255, 255, 0.212);
+	border-radius: 50%;
+	cursor: pointer;
+}
+.kvantorium-desc-img:hover{
+	transform: scale(1.07);
+	transition-duration: 0.5s;
+}
+.kvantorium-desc-img img{
+	margin-top: 80px;
+}
+.kvantorium-desc p{
+	margin: 50px 60px;
+}
+
 
 .featured{
 	display: flex;
