@@ -2,10 +2,13 @@
 	margin:0;
 	padding:0;
 }
+*:focus{
+	outline: none;
+}
 .header{
 	position: relative;
 	background: #FFFFFF;
-	height: 30px;
+	height: 100px;
 }
 .logo{
 	float: left;
@@ -28,6 +31,7 @@
 	margin-left: 20px;
 	border-radius: 10px;
 	padding: 5px;
+	
 }
 .search img:hover{
 	cursor: pointer;
@@ -43,7 +47,7 @@
 	display: flex;
 }
 .nav a{
-	margin:  0 100px;
+	margin:  0 1%;
 	width: 100%;
 	box-sizing: border-box;
 	padding: 10px 30px;
@@ -56,13 +60,66 @@
 }
 
 .kvantum{
-	height: 700px;
+	min-height: 700px;
 	padding: 30px;
 }
-.kvantum h1{
+.kvantum-name{
+	text-align: center;
 	font-family: 'Roboto Slab', serif;
 	color: rgb(37, 37, 37);
 	font-size: 30px;
+}
+
+.background-pic{
+	position:fixed;
+	height: 4000px;
+	display: block;
+	width: 4000px;
+	z-index: -20;
+	left: 0;
+	top:0;
+	background-image: url("../res/images/bg.jpg");
+	-webkit-filter: blur(10px);
+  	-moz-filter: blur(10px);
+  	-o-filter: blur(10px);
+  	-ms-filter: blur(10px);
+	filter: blur(10px) brightness(50%);
+}
+.kvantorium-desc{
+	width:100%;
+	color: white;
+	text-align: center;
+	font-size: 24px;
+}
+.kvantorium-desc-img{
+	transition-duration: 0.5s;
+	display: inline-block;
+	height:300px;
+	width:300px;
+	margin: 40px;
+	background: rgba(255, 255, 255, 0.212);
+	border-radius: 50%;
+	cursor: pointer;
+}
+.kvantorium-desc-img:hover{
+	transform: scale(1.07);
+	transition-duration: 0.5s;
+}
+.kvantorium-desc-img img{
+	margin-top: 80px;
+}
+.kvantorium-desc p{
+	margin: 50px 60px;
+}
+
+
+.featured{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 5%;
+	margin-left: 2%;
+	
 }
 
 #Bio{background: rgb(227, 252, 233);}
@@ -72,17 +129,180 @@
 #Design{background: rgb(255, 229, 237);}
 #Hitech{background: rgb(253, 225, 225);}
 
-.proj .rating{
+.proj-card{
+	font-family: 'Roboto Slab', serif;
+	margin: 17px 40px;
+	text-align: center;
+	background: rgb(255, 255, 255);
+	width: 17%;
+	min-width: 250px;
+	height: 400px;
+	position: relative;
+	transition-duration: 100ms;
+}
+.proj-card:hover{
+	transform: scale(1.1, 1.1);
+	cursor: pointer;
+	transition-duration: 100ms;
+}
+.project-descriptor{
+	color: grey;
+}
+
+.rating{
 	font-family: 'Ubuntu', sans-serif;
 	font-size: 15px;
-	color: rgb(20, 20, 20);
+	color: rgb(231, 231, 231);
+	display: inline-flex; 
+	position: absolute;
+	bottom: 0;
+	background-color: rgb(37, 37, 37);
+	width: 100%;
+	right: 0;
+	padding: 8px 0px;
 }
-.proj .rating div img{
+
+.likes{
+	margin-right: 5px;
+	width: 50%;
+	text-align: center;
+}
+.rating div img{
 	height: 15px;
 	width: 15px;
+}
+.proj-image{
+	width: 100%;
+	height: auto;
+}
+.project-name{
+	font-size: 25px;
+	padding: 10px 0;
+	font-family: 'Ubuntu', sans-serif;
 }
 
 footer{
 	height: 100px;
+	padding: 25px;
 	background: rgb(34, 33, 33);
+}
+
+.phone{
+	height: 30px;
+	width: 100%;
+	display: inline-flex;
+	float: left;
+	margin-bottom: 10px;
+}
+.phone-logo{
+	height: 30px;
+	width: 30px;
+}
+.phone-number{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 15px;
+	color: #FFFFFF;
+	text-decoration: none;
+	margin-left: 10px;
+	padding-top: 7px;
+}
+
+.mail{
+	height:30px;
+	width: 100%;
+	display: inline-flex;
+	float: left;
+	margin-bottom: 10px;
+}
+.mail-logo{
+	height: 30px;
+	width: 35px;
+}
+.email{
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 15px;
+	color: #FFFFFF;
+	text-decoration: none;
+	margin-left: 10px;
+	padding-top: 7px;
+}
+
+#overlay{
+	position: fixed;
+	top: 0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	display: none;
+	background-color:rgba(39, 39, 39, 0.5);
+	z-index: 10;
+  	align-items: center;
+	justify-content: center;
+}
+.popup{
+	position: absolute;
+	background: #FFFFFF;
+	width: 600px;
+	height: 750px;
+	border-radius: 30px;
+	padding: 30px 15px;
+	text-align: center;
+}
+
+.login-reg:hover{
+	color: rgb(0, 120, 156);
+	transition-duration: 0.7s;
+}
+
+.login-reg{transition-duration: 0.7s;}
+
+.signinup{
+	font-size: 30px;
+	font-family: 'Ubuntu', sans-serif;
+	color: rgb(39,39,39);
+}
+.signinup a:hover{
+	cursor: pointer;
+}
+.field{
+	width: 50%;
+	margin: 50px auto;
+	font-family: 'Ubuntu', sans-serif;
+}
+.field input{
+	transition-duration: 500ms;
+	width:100%;
+	height: 40px;
+	margin-top: 5px;
+	border-radius: 20px;
+	padding: 7px;
+	border: 3px solid rgb(56, 56, 56);
+}
+.field input:focus{
+	border-color: rgb(0, 174, 255);
+}
+.submit{
+	transition-duration: 0.6s;
+	border-radius: 25px;
+	height: 50px;
+	width: 30%;
+	border: 2px solid rgb(0, 174, 255);
+	background: white;
+	color: rgb(0, 174, 255);
+	font-family: 'Ubuntu', sans-serif;
+	margin-top: 80px;
+}
+.submit:hover{
+	background: rgb(0, 174, 255);
+	color:white;
+}
+.close{
+	height: 12px;
+	width: 12px;
+	float: right;
+	cursor: pointer;
+}
+
+#login{
+	display:none;
 }
